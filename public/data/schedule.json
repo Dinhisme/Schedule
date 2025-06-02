@@ -1,0 +1,3704 @@
+{
+  "ptthu": {
+    "weeks": {
+      "2025-21": [
+        {
+          "staff": "tuần trước",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": "2",
+          "shift": "Hàng 5"
+        }
+      ],
+      "2025-22": [
+        {
+          "staff": "khang",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": "2",
+          "shift": "Hàng 5"
+        },
+        {
+          "staff": "dìa dia",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": 1,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "vinh nè",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": 1,
+          "shift": "Hàng 8"
+        },
+        {
+          "staff": "yes sir",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": "5",
+          "shift": "Hàng 9"
+        }
+      ],
+      "2025-23": [
+        {
+          "staff": "hí",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": 0,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "dìa dia",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": 3,
+          "shift": "Hàng 5"
+        },
+        {
+          "staff": "yes sir",
+          "notes": "",
+          "department": "Khoa Cấp Cứu",
+          "day": 6,
+          "shift": "Hàng 11"
+        }
+      ]
+    }
+  },
+  "pqvinh": {
+    "weeks": {
+      "2025-22": [
+        {
+          "staff": "LĐ 1",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": "0",
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "LĐ 2",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": "1",
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "LĐ 3",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": 2,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "LĐ 4",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": 3,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "LĐ 5",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": 4,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "LĐ 1",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": 5,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "LĐ 2",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": 6,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 1",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 0,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 2",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 1,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 3",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 2,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 4",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 3,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 1",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 4,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 2",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 5,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TH TR 3",
+          "notes": "",
+          "department": "Thường trú",
+          "day": 6,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 1",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": 0,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 2",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": "1",
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 3",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": "2",
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 4",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": 3,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 5",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": 4,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 6",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": 5,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "TT 1",
+          "notes": "",
+          "department": "Trưởng tua",
+          "day": 6,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "1",
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 3",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 4",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 5",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 6",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC 7",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 1"
+        },
+        {
+          "staff": "BS CC H1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC H2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "1",
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC H3",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC H4",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC H5",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC H1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC H2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 2"
+        },
+        {
+          "staff": "BS CC B1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "0",
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC B2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "1",
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC B3",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "2",
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC B4",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "3",
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC B5",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "4",
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC B1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC B2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 3"
+        },
+        {
+          "staff": "BS CC T1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 4"
+        },
+        {
+          "staff": "BS CC T2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 4"
+        },
+        {
+          "staff": "BS CC T3",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 4"
+        },
+        {
+          "staff": "BS CC T4",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 4"
+        },
+        {
+          "staff": "BS CC T1",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": "4",
+          "shift": "Hàng 4"
+        },
+        {
+          "staff": "BS CC T2",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 4"
+        },
+        {
+          "staff": "BS CC T3",
+          "notes": "",
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 4"
+        }
+      ],
+      "2025-23": [
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "LĐ 5",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "LĐ 3",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "LĐ 4",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "LĐ 1",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": "4",
+          "shift": "Hàng 1",
+          "staff": "LĐ 2",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": "5",
+          "shift": "Hàng 1",
+          "staff": "LĐ 3",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "LĐ 4",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "TH TR 4",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "TH TR 1",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "TH TR 2",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "TH TR 3",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "TH TR 4",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "TH TR 1",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "TH TR 2",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "TT 2",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "TT 3",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "TT 4",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "TT 5",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "TT 6",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "TT 1",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "TT 2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "BS CC 2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "BS CC 3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "BS CC 4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "BS CC 5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "BS CC 6",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "BS CC 7",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "BS CC 1",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Thường Trú",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "BS CC H3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "BS CC H4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "BS CC H5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "BS CC H1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "BS CC H2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "BS CC H3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "BS CC H4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "BS CC B3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "BS CC B4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "BS CC B5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "BS CC B1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "BS CC B2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "BS CC B3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "BS CC B4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 4",
+          "staff": "BS CC T4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 4",
+          "staff": "BS CC T1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 4",
+          "staff": "BS CC T2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 4",
+          "staff": "BS CC T3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 4",
+          "staff": "BS CC T4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 4",
+          "staff": "BS CC T1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 4",
+          "staff": "BS CC T2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        }
+      ],
+      "2025-24": [
+        {
+          "department": "Bs Khoa HS",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "LĐ 5",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "LĐ 1",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "LĐ 2",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "LĐ 3",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "LĐ 4",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "LĐ 5",
+          "notes": ""
+        },
+        {
+          "department": "Trực Lãnh Đạo",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "LĐ 1",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "TH TR 3",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "TH TR 4",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "TH TR 1",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "TH TR 2",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "TH TR 3",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "TH TR 4",
+          "notes": ""
+        },
+        {
+          "department": "Thường trú",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "TH TR 1",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "TT 3",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "TT 4",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "TT 5",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "TT 6",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "TT 1",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "TT 2",
+          "notes": ""
+        },
+        {
+          "department": "Trưởng tua",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "TT 3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "BS CC 3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "BS CC 4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "BS CC 5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "BS CC 6",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "BS CC 7",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "BS CC 1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "BS CC 2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "BS CC H5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "BS CC H1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "BS CC H2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "BS CC H3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "BS CC H4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "BS CC H5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "BS CC H1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "BS CC B5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "BS CC B1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "BS CC B2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "BS CC B3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "BS CC B4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "BS CC B5",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "BS CC B1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 0,
+          "shift": "Hàng 4",
+          "staff": "BS CC T3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 1,
+          "shift": "Hàng 4",
+          "staff": "BS CC T4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 2,
+          "shift": "Hàng 4",
+          "staff": "BS CC T1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 3,
+          "shift": "Hàng 4",
+          "staff": "BS CC T2",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 4,
+          "shift": "Hàng 4",
+          "staff": "BS CC T3",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 5,
+          "shift": "Hàng 4",
+          "staff": "BS CC T4",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa CC",
+          "day": 6,
+          "shift": "Hàng 4",
+          "staff": "BS CC T1",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 0,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 1,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 2,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 3,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 4,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 5,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Sanh",
+          "day": 6,
+          "shift": "Hàng 4",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa SB",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa Phụ",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HP",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa HS",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 0,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 1,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 2,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 3,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 4,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 5,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 6,
+          "shift": "Hàng 2",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 0,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 1,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 2,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 3,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 4,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 5,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Bs Khoa ĐTTYC",
+          "day": 6,
+          "shift": "Hàng 3",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Phụ TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa SB TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CС TK",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh TC",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa Sanh 13h-17h",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 0,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 1,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 2,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 3,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 4,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 5,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        },
+        {
+          "department": "Khoa CC 13h-17h",
+          "day": 6,
+          "shift": "Hàng 1",
+          "staff": "",
+          "notes": ""
+        }
+      ]
+    }
+  }
+}

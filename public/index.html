@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Lịch Trực</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/logoKHTHIT.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>QUẢN LÝ LỊCH TRỰC</h1>
+            <p>Sắp xếp lịch trực dễ dàng cho các khoa phòng</p>
+
+            <div style="float:right; margin-top: -50px;">
+                <span id="userInfo"></span>
+                <button id="logoutBtn" class="btn btn-secondary" style="display:none; margin-left: 5px;"
+                    onclick="logout()">Đăng
+                    xuất</button>
+            </div>
+
+            <div style="float:left; margin-top: -40px;">
+                <a href="/home" class="btn btn-home" style="border: 1px solid plum; text-decoration: none;">Trang lịch
+                    đầy đủ</a>
+            </div>
+        </div>
+
+        <div class="department-manager">
+            <!-- <h3>Quản lý Khoa/Phòng</h3> -->
+            <!-- <div class="department-input">
+                <input type="text" id="departmentInput" placeholder="Nhập tên khoa/phòng..."
+                    onkeypress="handleDepartmentEnter(event)">
+                <button class="btn btn-primary" onclick="addDepartment()">Thêm Khoa/Phòng</button>
+            </div> -->
+            <div class="department-list" id="departmentList"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-secondary active" id="currentWeekBtn" onclick="showWeek('current')">Tuần Hiện
+                Tại</button>
+            <button class="btn btn-secondary" id="nextWeekBtn" onclick="showWeek('next')">Tuần Tiếp Theo</button>
+            <button class="btn btn-secondary" onclick="exportSchedule()">📋 Xuất Lịch</button>
+            <!-- <button class="btn btn-primary" onclick="clearAllSchedules()">🗑️ Xóa Tất Cả</button> -->
+            <button class="btn btn-primary" onclick="rotateTuaTrucLanhDao()">🔄 Xoay tua tuần tới</button>
+        </div>
+
+        <div id="currentWeekSchedule" class="schedule-container">
+            <div class="week-title" id="currentWeekTitle"></div>
+            <div class="schedule-grid" id="currentGrid"></div>
+        </div>
+
+        <div id="nextWeekSchedule" class="schedule-container" style="display: none;">
+            <div class="week-title" id="nextWeekTitle"></div>
+            <div class="schedule-grid" id="nextGrid"></div>
+        </div>
+    </div>
+
+    <!-- Modal for editing shifts -->
+    <div id="shiftModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Chỉnh Sửa Ca Trực</h2>
+                <button class="close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="form-group">
+                <label for="staffName">Tên Nhân Viên:</label>
+                <input type="text" id="staffName" placeholder="Nhập tên nhân viên...">
+            </div>
+            <div class="form-group">
+                <label for="notes">Ghi Chú:</label>
+                <input type="text" id="notes" placeholder="Ghi chú thêm...">
+            </div>
+            <div class="modal-actions">
+                <button id="deleteShift" class="btn btn-danger" onclick="deleteShift()">Xóa Ca</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Hủy</button>
+                <button id="saveShift" class="btn btn-primary" onclick="saveShift()">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let departments = ['Trực Lãnh Đạo', 'Thường trú', 'Trưởng tua', 'Bs Khoa CC', 'Khoa Cấp Cứu', 'Khoa CC Nhi-Sơ sinh', 'Bs Khoa Sanh', 'Khoa Sanh', 'Bs Khoa SB', 'Khoa SB', 'Bs Khoa Phụ', 'Khoa Phụ', 'Bs Khoa HP', 'Khoa HP',
+            'Bs Khoa HS', 'Khoa HS', 'Bs Khoa ĐTTYC', 'Khoa ĐTTYC', 'Khu A', 'Khu B', 'Khu C', 'TT Khoa Ptgm Hsct-Cđ', 'Khoa Ptgm Hsct-Cđ Kv Gây mê', 'Khoa Ptgm-Hstc-Cđ KV ICU',
+            'Khoa Ptgm-Hstc-Cđ Bs Khẩm Tiền Mê', 'ĐD Trực Ptgm Hstc-Cđ Ngày', 'ĐD trưc ICU Ngày', 'ĐD Trực Ptgm Hstc-Cđ Đêm', 'ĐD trực ICU Đêm',
+            'TT Khoa Nhi-Ss', 'Khoa Nhi-Sơ Sinh', 'Khoa Ksnk Thường Trú', 'Xét Nghiệm', 'Siêu Âm', 'TT Sâ Tim', 'X Quang', 'TT X Quang', 'Kế Toán',
+            'KDược', 'Thường Trú Bảo Trì', 'Phcqt', 'Tài Xế', 'Tin Học', 'Khoa Nhi SS TK', 'Khoa Ptgm-Hstc-Cd (KV hồi súc sau mỗ) TK', 'ĐD Trực Ptgm Hstc-Cd Ngày TK',
+            'ĐD Trực Ptgm Hstc-Cd Đêm TK', 'Khoa Phụ TK', 'Khoa Sanh TK', 'Khoa SB TK', 'Khoa CС TK', 'Khoa Sanh 13h-17h', 'Khoa CC 13h-17h', 'Khoa Ptgm-Hstc-Cđ',
+            'Khoa Sanh TC'
+        ];
+        let currentWeekSchedule = {};
+        let nextWeekSchedule = {};
+        let currentEditingCell = null;
+        let activeWeek = 'current';
+        let currentUser = JSON.parse(localStorage.getItem('currentUser')); // {username, departments: []}
+
+
+
+        // Initialize the application
+        function init() {
+            if (!currentUser) {
+                window.location.href = '/login.html'; // Redirect to login page if not logged in
+                return;
+            }
+            loadScheduleFromServer();
+            loadUserDepartments();
+            renderDepartments();
+            generateScheduleGrids();
+            updateWeekTitles();
+        }
+
+        function rotateTuaTrucLanhDao() {
+            // Lặp qua tất cả các khoa/phòng mà user có quyền
+            departments.forEach((dept) => {
+                // Xác định các shift cho dept này (giống như trong generateGrid)
+                let shifts;
+                switch (dept) {
+                    case 'Trực Lãnh Đạo':
+                    case 'Thường trú':
+                    case 'Trưởng tua':
+                    case 'Khu A':
+                    case 'Khu B':
+                    case 'Khu C':
+                    case 'TT Khoa Ptgm Hsct-Cđ':
+                    case 'Khoa Ptgm-Hstc-Cđ KV ICU':
+                    case 'Khoa Ptgm-Hstc-Cđ Bs Khẩm Tiền Mê':
+                    case 'ĐD trưc ICU Ngày':
+                    case 'ĐD trực ICU Đêm':
+                    case 'TT Khoa Nhi-Ss':
+                    case 'Khoa Ptgm-Hstc-Cd (KV hồi súc sau mỗ) TK':
+                    case 'ĐD Trực Ptgm Hstc-Cd Ngày TK':
+                    case 'ĐD Trực Ptgm Hstc-Cd Đêm TK':
+                    case 'Khoa Phụ TK':
+                    case 'Khoa Sanh TK':
+                    case 'Khoa SB TK':
+                    case 'Khoa CС TK':
+                    case 'Khoa Sanh 13h-17h':
+                    case 'Khoa CC 13h-17h':
+                    case 'Khoa Ptgm-Hstc-Cđ':
+                    case 'Khoa Sanh TC':
+                        shifts = ['Hàng 1'];
+                        break;
+                    case 'Bs Khoa CC':
+                    case 'Bs Khoa Sanh':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'];
+                        break;
+                    case 'Khoa Cấp Cứu':
+                    case 'Khoa Sanh':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10', 'Hàng 11', 'Hàng 12'];
+                        break;
+                    case 'Khoa CC Nhi-Sơ sinh':
+                        shifts = ['Hàng 1', 'Hàng 2'];
+                        break;
+                    case 'Khoa SB':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6'];
+                        break;
+                    case 'Khoa Phụ':
+                    case 'Khoa HP':
+                    case 'Khoa HS':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'];
+                        break;
+                    case 'ĐD Trực Ptgm Hstc-Cđ Ngày':
+                    case 'ĐD Trực Ptgm Hstc-Cđ Đêm':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8'];
+                        break;
+                    case 'Khoa Nhi-Sơ Sinh':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10'];
+                        break;
+                    case 'Khoa Ksnk Thường Trú':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3'];
+                        break;
+                    case 'Xét Nghiệm':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'];
+                        break;
+                    case 'Siêu Âm':
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3'];
+                        break;
+                    default:
+                        shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3'];
+                        break;
+                }
+
+                const deptIndex = departments.indexOf(dept);
+
+                shifts.forEach((shift) => {
+                    // Lấy danh sách 7 người trực tuần này cho dept và shift này
+                    let weekStaff = [];
+                    for (let day = 0; day < 7; day++) {
+                        const key = `${deptIndex}_${day}_${shift}`;
+                        if (currentWeekSchedule[key] && currentWeekSchedule[key].staff) {
+                            weekStaff.push(currentWeekSchedule[key].staff);
+                        } else {
+                            weekStaff.push(null);
+                        }
+                    }
+
+                    // Đếm số lần xuất hiện của từng người
+                    const staffCount = {};
+                    weekStaff.forEach(name => {
+                        if (name) staffCount[name] = (staffCount[name] || 0) + 1;
+                    });
+
+                    // Tìm các người bị trùng lặp (xuất hiện >1 lần)
+                    const duplicatedStaff = Object.keys(staffCount).filter(name => staffCount[name] > 1);
+
+                    // Xác định số người trùng lặp liên tiếp ở cuối tuần
+                    let numDuplicatedAtEnd = 0;
+                    for (let i = 6; i >= 0; i--) {
+                        if (weekStaff[i] && duplicatedStaff.includes(weekStaff[i])) {
+                            numDuplicatedAtEnd++;
+                        } else {
+                            break;
+                        }
+                    }
+
+                    let nextWeekStaff = [];
+
+                    if (duplicatedStaff.length === 0 || numDuplicatedAtEnd === 0) {
+                        // Không phát hiện tua bị trùng: Xoay tua kiểu đôn lên
+                        nextWeekStaff = [
+                            weekStaff[1], weekStaff[2], weekStaff[3],
+                            weekStaff[4], weekStaff[5], weekStaff[6], weekStaff[0]
+                        ];
+                    } else {
+                        // Có tua bị trùng: Xoay như quy tắc cũ
+                        const tuaThucTe = 7 - numDuplicatedAtEnd;
+                        const realStaff = weekStaff.slice(-tuaThucTe);
+                        const duplicatedList = weekStaff.slice(numDuplicatedAtEnd - 7);
+                        nextWeekStaff = [...duplicatedList, ...realStaff, ...duplicatedList].slice(0, 7);
+                    }
+
+                    // Gán lại lịch tuần sau đúng thứ tự
+                    for (let day = 0; day < 7; day++) {
+                        const key = `${deptIndex}_${day}_${shift}`;
+                        nextWeekSchedule[key] = {
+                            department: dept,
+                            day: day,
+                            shift: shift,
+                            staff: nextWeekStaff[day] || "",
+                            notes: ""
+                        };
+                    }
+                });
+            });
+
+            saveScheduleToServer();
+            showWeek('next');
+            alert('Đã xoay tua tuần tới cho tất cả các khoa/phòng và ca trực!');
+        }
+
+        // Department management
+        function addDepartment() {
+            const input = document.getElementById('departmentInput');
+            const departmentName = input.value.trim();
+            if (departmentName && !departments.includes(departmentName)) {
+                departments.push(departmentName);
+                input.value = '';
+                renderDepartments();
+                generateScheduleGrids();
+                // Lưu lại vào tài khoản
+                if (currentUser) {
+                    const users = JSON.parse(localStorage.getItem('users') || '{}');
+                    users[currentUser.username].departments = departments;
+                    localStorage.setItem('users', JSON.stringify(users));
+                    localStorage.setItem('currentUser', JSON.stringify({ ...currentUser, departments }));
+                }
+            }
+        }
+
+        function handleDepartmentEnter(event) {
+            if (event.key === 'Enter') {
+                addDepartment();
+            }
+        }
+
+        function removeDepartment(index) {
+            departments.splice(index, 1);
+            renderDepartments();
+            generateScheduleGrids();
+            // Lưu lại vào tài khoản
+            if (currentUser) {
+                const users = JSON.parse(localStorage.getItem('users') || '{}');
+                users[currentUser.username].departments = departments;
+                localStorage.setItem('users', JSON.stringify(users));
+                localStorage.setItem('currentUser', JSON.stringify({ ...currentUser, departments }));
+            }
+        }
+
+        function renderDepartments() {
+            const container = document.getElementById('departmentList');
+            container.innerHTML = departments.map((dept, index) =>
+                `<div class="department-tag">
+                    ${dept}
+                    <button class="remove" onclick="removeDepartment(${index})">×</button>
+                </div>`
+            ).join('');
+        }
+
+        // Week management
+        function showWeek(week) {
+            activeWeek = week;
+            document.getElementById('currentWeekBtn').classList.toggle('active', week === 'current');
+            document.getElementById('nextWeekBtn').classList.toggle('active', week === 'next');
+            document.getElementById('currentWeekSchedule').style.display = week === 'current' ? 'block' : 'none';
+            document.getElementById('nextWeekSchedule').style.display = week === 'next' ? 'block' : 'none';
+        }
+
+        function updateWeekTitles() {
+            const today = new Date();
+            const currentMonday = getMonday(today);
+            const nextMonday = new Date(currentMonday);
+            nextMonday.setDate(nextMonday.getDate() + 7);
+
+            document.getElementById('currentWeekTitle').textContent =
+                `Tuần Hiện Tại (${formatDate(currentMonday)} - ${formatDate(new Date(currentMonday.getTime() + 6 * 24 * 60 * 60 * 1000))})`;
+            document.getElementById('nextWeekTitle').textContent =
+                `Tuần Tiếp Theo (${formatDate(nextMonday)} - ${formatDate(new Date(nextMonday.getTime() + 6 * 24 * 60 * 60 * 1000))})`;
+        }
+
+        function getMonday(date) {
+            const d = new Date(date);
+            const day = d.getDay();
+            const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+            return new Date(d.setDate(diff));
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit' });
+        }
+
+        // Schedule grid generation
+        function generateScheduleGrids() {
+            generateGrid('currentGrid');
+            generateGrid('nextGrid');
+        }
+
+        // Thay đổi trong hàm generateGrid để thêm thuộc tính draggable và các sự kiện drag & drop
+        function generateGrid(gridId) {
+            const grid = document.getElementById(gridId);
+            const daysOfWeek = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ Nhật'];
+            grid.innerHTML = '';
+            grid.appendChild(createGridCell('Khoa/Phòng', 'grid-header'));
+            daysOfWeek.forEach(day => {
+                grid.appendChild(createGridCell(day, 'grid-header'));
+            });
+
+            departments.forEach((dept, deptIndex) => {
+                grid.appendChild(createGridCell(dept, 'grid-cell department-row'));
+                for (let day = 0; day < 7; day++) {
+                    const cell = createGridCell('', 'grid-cell');
+                    const cellId = `${gridId}_${deptIndex}_${day}`;
+                    cell.id = cellId;
+                    // const shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3']; // Các ca trực
+                    // Add shift slots
+                    let shifts;
+                    switch (dept) {
+                        case 'Trực Lãnh Đạo':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Thường trú':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Trưởng tua':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Bs Khoa CC':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'];
+                            break;
+                        case 'Khoa Cấp Cứu':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10', 'Hàng 11', 'Hàng 12'];
+                            break;
+                        case 'Khoa CC Nhi-Sơ sinh':
+                            shifts = ['Hàng 1', 'Hàng 2']
+                            break;
+                        case 'Bs Khoa Sanh':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'];
+                            break;
+                        case 'Khoa Sanh':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10', 'Hàng 11', 'Hàng 12'];
+                            break;
+                        case 'Bs Khoa SB':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa SB':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6'];
+                            break;
+                        case 'Bs Khoa Phụ':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Phụ':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'];
+                            break;
+                        case 'Bs Khoa HP':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa HP':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'];
+                            break;
+                        case 'Bs Khoa HS':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa HS':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'];
+                            break;
+                        case 'Bs Khoa ĐTTYC':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa ĐTTYC':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khu A':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khu B':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khu C':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'TT Khoa Ptgm Hsct-Cđ':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Ptgm-Hstc-Cđ KV Gây mê':
+                            shifts = ['Hàng 1', 'Hàng 2'];
+                            break;
+                        case 'Khoa Ptgm-Hstc-Cđ KV ICU':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Pigm-Hstc-Cđ Bs Khẩm Tiền Mê':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'ĐD Trực Ptgm Hstc-Cđ Ngày':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8'];
+                            break;
+                        case 'ĐD trưc ICU Ngày':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'ĐD Trực Ptgm Hstc-Cđ Đêm':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8'];
+                            break;
+                        case 'ĐD trực ICU Đêm':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'TT Khoa Nhi-Ss':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Nhi-Sơ Sinh':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', ' Hàng 9', 'Hàng 10'];
+                            break;
+                        case 'Khoa Ksnk Thường Trú':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3'];
+                            break;
+                        case 'Xét Nghiệm':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'];
+                            break;
+                        case 'Siêu Âm':
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3'];
+                            break;
+                        case 'TT Sâ Tim':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'X Quang':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'TT X Quang':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Kế Toán':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Dược':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Thường Trú Bảo Trì':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Phcqt':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Tài Xế':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Tin Học':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Nhi SS TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Ptgm-Hstc-Cd (KV hồi súc sau mỗ) TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'ĐD Trực Ptgm Hstc-Cd Ngày TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'ĐD Trực Ptgm Hstc-Cd Đêm TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Phụ TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Sanh TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa SB TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa CС TK':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Sanh 13h-17h':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa CC 13h-17h':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Ptgm-Hstc-Cđ':
+                            shifts = ['Hàng 1'];
+                            break;
+                        case 'Khoa Sanh TC':
+                            shifts = ['Hàng 1']
+                            break;
+                        default:
+                            shifts = ['Hàng 1', 'Hàng 2', 'Hàng 3'];
+                            break;
+                    }
+
+                    shifts.forEach((shift, shiftIndex) => {
+                        const slotDiv = document.createElement('div');
+                        slotDiv.className = 'shift-slot';
+                        slotDiv.textContent = shift;
+                        slotDiv.draggable = true;
+                        slotDiv.dataset.deptIndex = deptIndex;
+                        slotDiv.dataset.day = day;
+                        slotDiv.dataset.shift = shift;
+                        slotDiv.dataset.gridId = gridId;
+
+
+                        activeWeek = gridId.includes('current') ? 'current' : 'next';
+                        // Drag events
+                        if (activeWeek == 'next') {
+                            slotDiv.draggable = true;
+                            slotDiv.ondragstart = handleDragStart;
+                            slotDiv.ondragover = handleDragOver;
+                            slotDiv.ondrop = handleDrop;
+                            slotDiv.ondragenter = handleDragEnter;
+                            slotDiv.ondragleave = handleDragLeave;
+                        } else {
+                            slotDiv.draggable = false;
+                        }
+
+                        // Click để chỉnh sửa như cũ
+                        slotDiv.onclick = (e) => {
+                            // Nếu đang kéo thì không mở modal
+                            if (e.detail === 1 && !slotDiv.classList.contains('dragging')) {
+                                openShiftModal(gridId, deptIndex, day, shift);
+                            }
+                        };
+
+                        // Hiển thị dữ liệu nếu có
+                        const week = gridId.includes('current') ? 'current' : 'next';
+                        const scheduleData = week === 'current' ? currentWeekSchedule : nextWeekSchedule;
+                        const key = `${deptIndex}_${day}_${shift}`;
+                        const data = scheduleData[key];
+                        if (data) {
+                            slotDiv.className = 'shift-slot filled';
+                            slotDiv.innerHTML = `<strong>${data.staff}</strong>`;
+                        }
+
+                        cell.appendChild(slotDiv);
+                    });
+                    grid.appendChild(cell);
+                }
+            });
+        }
+
+        function createGridCell(content, className) {
+            const cell = document.createElement('div');
+            cell.className = className;
+            cell.innerHTML = content;
+            return cell;
+        }
+
+        // Drag & Drop handlers
+        let dragSource = null;
+        function handleDragStart(e) {
+            dragSource = this;
+            this.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', JSON.stringify({
+                deptIndex: this.dataset.deptIndex,
+                day: this.dataset.day,
+                shift: this.dataset.shift,
+                gridId: this.dataset.gridId
+            }));
+
+        }
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+
+        }
+        function handleDragEnter(e) {
+            this.classList.add('drag-over');
+
+        }
+        function handleDragLeave(e) {
+            this.classList.remove('drag-over');
+
+        }
+        function handleDrop(e) {
+            e.preventDefault();
+            this.classList.remove('drag-over');
+
+            if (!dragSource) return;
+            const src = JSON.parse(e.dataTransfer.getData('text/plain'));
+            const dest = {
+                deptIndex: this.dataset.deptIndex,
+                day: this.dataset.day,
+                shift: this.dataset.shift,
+                gridId: this.dataset.gridId
+            };
+            // Không cho kéo vào chính nó
+            if (src.deptIndex === dest.deptIndex && src.day === dest.day && src.shift === dest.shift && src.gridId === dest.gridId) return;
+
+            // Lấy dữ liệu nguồn
+            const srcWeek = src.gridId.includes('current') ? 'current' : 'next';
+            const srcSchedule = srcWeek === 'current' ? currentWeekSchedule : nextWeekSchedule;
+            const srcKey = `${src.deptIndex}_${src.day}_${src.shift}`;
+            const srcData = srcSchedule[srcKey];
+
+            // Lấy dữ liệu đích
+            const destWeek = dest.gridId.includes('current') ? 'current' : 'next';
+            const destSchedule = destWeek === 'current' ? currentWeekSchedule : nextWeekSchedule;
+            const destKey = `${dest.deptIndex}_${dest.day}_${dest.shift}`;
+            const destData = destSchedule[destKey];
+
+            // Nếu có dữ liệu nguồn
+            if (srcData) {
+                // Nếu ô đích đã có người trực, thực hiện hoán đổi
+                if (destData) {
+                    // Đổi chỗ hai người trực
+                    srcSchedule[srcKey] = { ...destData, department: departments[src.deptIndex], day: src.day, shift: src.shift };
+                } else {
+                    // Nếu ô đích chưa có ai, xóa ô nguồn
+                    delete srcSchedule[srcKey];
+                }
+                // Đặt người trực mới vào ô đích
+                destSchedule[destKey] = { ...srcData, department: departments[dest.deptIndex], day: dest.day, shift: dest.shift };
+
+                saveScheduleToServer();
+                generateScheduleGrids();
+            }
+            dragSource.classList.remove('dragging');
+            dragSource = null;
+        }
+
+        function openShiftModal(gridId, deptIndex, day, shift) {
+            const week = gridId.includes('current') ? 'current' : 'next';
+
+            // Disable/enable nút theo tuần
+            document.getElementById('deleteShift').disabled = (week === 'current');
+            document.getElementById('saveShift').disabled = (week === 'current');
+
+            const scheduleData = week === 'current' ? currentWeekSchedule : nextWeekSchedule;
+            const key = `${deptIndex}_${day}_${shift}`;
+
+            currentEditingCell = { gridId, deptIndex, day, shift, week, key };
+
+            const existingData = scheduleData[key];
+            if (existingData) {
+                document.getElementById('staffName').value = existingData.staff || '';
+                document.getElementById('notes').value = existingData.notes || '';
+            } else {
+                document.getElementById('staffName').value = '';
+                document.getElementById('notes').value = '';
+            }
+
+            document.getElementById('shiftModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('shiftModal').style.display = 'none';
+            currentEditingCell = null;
+        }
+
+        function saveShiftMove() {
+
+            const staffName = document.getElementById('staffName').value.trim();
+            const notes = document.getElementById('notes').value.trim();
+
+            const { week, key, gridId, deptIndex, day, shift } = currentEditingCell;
+            const scheduleData = week === 'current' ? currentWeekSchedule : nextWeekSchedule;
+
+            scheduleData[key] = {
+                staff: staffName,
+                notes: notes,
+                department: departments[deptIndex],
+                day: day,
+                shift: shift
+            };
+
+            updateShiftDisplay(gridId, deptIndex, day, shift, scheduleData[key]);
+            saveScheduleToServer();
+        }
+
+        function saveShift() {
+            if (!currentEditingCell) return;
+            if (activeWeek === 'current') return; // Không cho lưu tuần hiện tại
+            const staffName = document.getElementById('staffName').value.trim();
+            const notes = document.getElementById('notes').value.trim();
+
+            if (!staffName) {
+                alert('Vui lòng nhập tên nhân viên!');
+                return;
+            }
+
+            const { week, key, gridId, deptIndex, day, shift } = currentEditingCell;
+            const scheduleData = week === 'current' ? currentWeekSchedule : nextWeekSchedule;
+
+            scheduleData[key] = {
+                staff: staffName,
+                notes: notes,
+                department: departments[deptIndex],
+                day: day,
+                shift: shift
+            };
+
+            updateShiftDisplay(gridId, deptIndex, day, shift, scheduleData[key]);
+            closeModal();
+            saveScheduleToServer();
+        }
+
+        function deleteShift() {
+            if (!currentEditingCell) return;
+            if (activeWeek === 'current') return; // Không cho xóa tuần hiện tại
+            const { week, key, gridId, deptIndex, day, shift } = currentEditingCell;
+            const scheduleData = week === 'current' ? currentWeekSchedule : nextWeekSchedule;
+
+            delete scheduleData[key];
+            updateShiftDisplay(gridId, deptIndex, day, shift, null);
+            closeModal();
+            saveScheduleToServer();
+        }
+
+        function updateShiftDisplay(gridId, deptIndex, day, shift, data) {
+            const cellId = `${gridId}_${deptIndex}_${day}`;
+            const cell = document.getElementById(cellId);
+            const shiftSlots = cell.querySelectorAll('.shift-slot');
+
+            // Tìm đúng shiftIndex theo tên shift
+            let shiftIndex = -1;
+            shiftSlots.forEach((slot, idx) => {
+                if (slot.dataset.shift === shift) shiftIndex = idx;
+            });
+
+            if (shiftIndex === -1) return; // Không tìm thấy shift phù hợp
+
+            const slotDiv = shiftSlots[shiftIndex];
+
+            if (data) {
+                slotDiv.className = 'shift-slot filled';
+                slotDiv.innerHTML = `<strong>${data.staff}</strong><br><small>${data.shift}</small>`;
+            } else {
+                slotDiv.className = 'shift-slot';
+                slotDiv.textContent = shift;
+            }
+        }
+
+        // Utility functions
+        function exportSchedule() {
+            const week = activeWeek === 'current' ? 'Hiện Tại' : 'Tiếp Theo';
+            const scheduleData = activeWeek === 'current' ? currentWeekSchedule : nextWeekSchedule;
+
+            let exportText = `LỊCH TRỰC TUẦN ${week.toUpperCase()}\n`;
+            exportText += '='.repeat(50) + '\n\n';
+
+            departments.forEach((dept, deptIndex) => {
+                exportText += `${dept.toUpperCase()}\n`;
+                exportText += '-'.repeat(30) + '\n';
+
+                for (let day = 0; day < 7; day++) {
+                    const dayNames = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ Nhật'];
+                    exportText += `${dayNames[day]}:\n`;
+
+                    ['Hàng 1', 'Hàng 2', 'Hàng 3'].forEach(shift => {
+                        const key = `${deptIndex}_${day}_${shift}`;
+                        const data = scheduleData[key];
+                        if (data) {
+                            exportText += `  ${shift}: ${data.staff}`;
+                            if (data.notes) exportText += ` (${data.notes})`;
+                            exportText += '\n';
+                        } else {
+                            exportText += `  ${shift}: Chưa xếp\n`;
+                        }
+                    });
+                    exportText += '\n';
+                }
+                exportText += '\n';
+            });
+
+            const blob = new Blob([exportText], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `lich-truc-tuan-${week.toLowerCase()}.txt`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function clearAllSchedules() {
+            if (confirm('Bạn có chắc chắn muốn xóa tất cả lịch trực?')) {
+                currentWeekSchedule = {};
+                nextWeekSchedule = {};
+                generateScheduleGrids();
+                saveScheduleToServer();
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('shiftModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // function showLogin() {
+        //     document.getElementById('loginContainer').style.display = 'flex';
+        //     document.getElementById('registerContainer').style.display = 'none';
+        // }
+        // function showRegister() {
+        //     document.getElementById('loginContainer').style.display = 'none';
+        //     document.getElementById('registerContainer').style.display = 'flex';
+        // }
+
+
+
+        // async function register() {
+        //     const username = document.getElementById('registerUsername').value.trim();
+        //     const password = document.getElementById('registerPassword').value;
+        //     const departments = document.getElementById('registerDepartments').value.split(',').map(s => s.trim()).filter(Boolean);
+        //     if (!username || !password || departments.length === 0) {
+        //         document.getElementById('registerError').textContent = 'Vui lòng nhập đầy đủ thông tin!';
+        //         return;
+        //     }
+        //     const res = await fetch('/api/register', {
+        //         method: 'POST',
+        //         headers: { 'Content-Type': 'application/json' },
+        //         body: JSON.stringify({ username, password, departments })
+        //     });
+        //     if (res.ok) {
+        //         document.getElementById('registerError').textContent = 'Đăng ký thành công! Vui lòng đăng nhập.';
+        //         setTimeout(showLogin, 1000);
+        //     } else {
+        //         const data = await res.json();
+        //         document.getElementById('registerError').textContent = data.error || 'Lỗi đăng ký!';
+        //     }
+        // }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = '/login.html'; // Redirect to login page
+        }
+
+        function loadUserDepartments() {
+            if (!currentUser) return;
+            // Chỉ hiển thị khoa/phòng của user
+            departments = currentUser.departments.slice();
+            renderDepartments();
+            generateScheduleGrids();
+            updateWeekTitles();
+            document.getElementById('logoutBtn').style.display = 'inline-block';
+            document.getElementById('userInfo').textContent = '👤 ' + currentUser.username;
+            console.log('Current user departments:', currentUser.username);
+        }
+
+        // Lưu lịch trực lên server
+        async function saveScheduleToServer() {
+            if (!currentUser) return;
+            const weekKey = activeWeek === 'current' ? getCurrentWeekKey() : getNextWeekKey();
+            const schedule = Object.values(activeWeek === 'current' ? currentWeekSchedule : nextWeekSchedule);
+            await fetch('/api/save-schedule', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: currentUser.username,
+                    weekKey,
+                    schedule
+                })
+            });
+        }
+
+        // Tải lịch trực từ server
+        async function loadScheduleFromServer() {
+            if (!currentUser) return;
+            // Tải tuần hiện tại
+            let weekKey = getCurrentWeekKey();
+            let res = await fetch('/api/load-schedule', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: currentUser.username, weekKey })
+            });
+            let data = await res.json();
+            currentWeekSchedule = {};
+            (data.schedule || []).forEach(item => {
+                const key = `${departments.indexOf(item.department)}_${item.day}_${item.shift}`;
+                currentWeekSchedule[key] = item;
+            });
+
+            // Tải tuần tiếp theo
+            weekKey = getNextWeekKey();
+            res = await fetch('/api/load-schedule', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: currentUser.username, weekKey })
+            });
+            data = await res.json();
+            nextWeekSchedule = {};
+            (data.schedule || []).forEach(item => {
+                const key = `${departments.indexOf(item.department)}_${item.day}_${item.shift}`;
+                nextWeekSchedule[key] = item;
+            });
+
+            generateScheduleGrids();
+        }
+
+        function loadAllSchedules() {
+            fetch('/api/all-schedules')
+                .then(res => res.json())
+                .then(allSchedules => {
+                    currentWeekSchedule = {};
+                    nextWeekSchedule = {};
+                    const weekKeyCurrent = getCurrentWeekKey();
+                    const weekKeyNext = getNextWeekKey();
+
+                    Object.values(allSchedules).forEach(userSchedule => {
+                        // Tuần hiện tại
+                        if (userSchedule.weeks && userSchedule.weeks[weekKeyCurrent]) {
+                            userSchedule.weeks[weekKeyCurrent].forEach(item => {
+                                if (departments.includes(item.department)) {
+                                    const deptIndex = departments.indexOf(item.department);
+                                    const key = `${deptIndex}_${item.day}_${item.shift}`;
+                                    currentWeekSchedule[key] = item;
+                                }
+                            });
+                        }
+                        // Tuần tiếp theo
+                        if (userSchedule.weeks && userSchedule.weeks[weekKeyNext]) {
+                            userSchedule.weeks[weekKeyNext].forEach(item => {
+                                if (departments.includes(item.department)) {
+                                    const deptIndex = departments.indexOf(item.department);
+                                    const key = `${deptIndex}_${item.day}_${item.shift}`;
+                                    nextWeekSchedule[key] = item;
+                                }
+                            });
+                        }
+                    });
+                    generateScheduleGrids();
+                })
+                .catch(() => {
+                    alert('Không thể tải dữ liệu lịch trực!');
+                });
+        }
+
+        // Initialize the application when page loads
+        document.addEventListener('DOMContentLoaded', init);
+
+        function getCurrentWeekKey(date = new Date()) {
+            const year = date.getFullYear();
+            const week = getISOWeekNumber(date);
+            return `${year}-${week}`;
+        }
+        function getNextWeekKey() {
+            const today = new Date();
+            const nextMonday = getMonday(today);
+            nextMonday.setDate(nextMonday.getDate() + 7);
+            return getCurrentWeekKey(nextMonday);
+        }
+        function getISOWeekNumber(date) {
+            const tmp = new Date(date.valueOf());
+            const dayNr = (date.getDay() + 6) % 7;
+            tmp.setDate(tmp.getDate() - dayNr + 3);
+            const firstThursday = tmp.valueOf();
+            tmp.setMonth(0, 1);
+            if (tmp.getDay() !== 4) {
+                tmp.setMonth(0, 1 + ((4 - tmp.getDay()) + 7) % 7);
+            }
+            return 1 + Math.ceil((firstThursday - tmp) / 604800000);
+        }
+    </script>
+</body>
+
+</html>
