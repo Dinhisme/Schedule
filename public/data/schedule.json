@@ -2089,22 +2089,22 @@
           "notes": ""
         },
         {
+          "staff": "LĐ 5 02131231231",
+          "notes": "",
           "department": "Trực Lãnh Đạo",
           "day": 0,
-          "shift": "Hàng 1",
-          "staff": "LĐ 5",
-          "notes": ""
+          "shift": "Hàng 1"
         },
         {
           "department": "Trực Lãnh Đạo",
-          "day": 1,
+          "day": "1",
           "shift": "Hàng 1",
           "staff": "LĐ 1",
           "notes": ""
         },
         {
           "department": "Trực Lãnh Đạo",
-          "day": 2,
+          "day": "2",
           "shift": "Hàng 1",
           "staff": "LĐ 2",
           "notes": ""
@@ -2440,14 +2440,14 @@
         },
         {
           "department": "Bs Khoa Sanh",
-          "day": 1,
+          "day": "1",
           "shift": "Hàng 1",
           "staff": "",
           "notes": ""
         },
         {
           "department": "Bs Khoa Sanh",
-          "day": 2,
+          "day": "2",
           "shift": "Hàng 1",
           "staff": "",
           "notes": ""

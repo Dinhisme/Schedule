@@ -5,20 +5,20 @@
 }
 
 
-/* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 20px;
-} */
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    min-height: 100vh;
     padding: 20px;
 }
+
+/* body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+} */
 
 /* Hiệu ứng nền động */
 body::before {
@@ -256,7 +256,7 @@ button:disabled,
     transform: scale(1.02);
 }
 
-.shift-slot.filled {
+/* .shift-slot.filled {
     background: linear-gradient(45deg, #28a745, #20c997);
     color: white;
     border: 2px solid #28a745;
@@ -265,6 +265,17 @@ button:disabled,
 
 .shift-slot.filled:hover {
     background: linear-gradient(45deg, #218838, #1ea97c);
+} */
+
+.shift-slot.filled {
+    background: linear-gradient(45deg, #cef9ff, #ffffff);
+    color: rgb(0, 0, 0);
+    border: 2px solid #6fa9ff;
+    font-weight: 500;
+}
+
+.shift-slot.filled:hover {
+    background: linear-gradient(45deg, #84d8ff, #ffffff);
 }
 
 .modal {
@@ -357,8 +368,20 @@ button:disabled,
 
 @media (max-width: 768px) {
     .schedule-grid {
-        grid-template-columns: 100px repeat(7, 1fr);
-        font-size: 12px;
+        grid-template-columns: auto repeat(3, minmax(60px, 1fr));
+        font-size: 8px;
+    }
+
+    .grid-header {
+        font-size: 8px;
+    }
+    
+    .grid-cell {
+        font-size: 8px;
+    }
+
+    .shift-slot {
+        font-size: 8px;
     }
 
     .container {
@@ -372,5 +395,56 @@ button:disabled,
 
     .department-input {
         flex-direction: column;
+    }
+    .department-manager {
+        display: none;
+    }
+
+    .tilte_content{
+        display: none;
+    }
+
+    .userIf{
+        display: none;
+    }
+
+    .header h1 {
+        margin-bottom: 50px;
+    }
+}
+    
+@media (max-width: 390px) {
+
+    .schedule-grid {
+        grid-template-columns: auto repeat(3, minmax(30px, 1fr));
+        font-size: 8px;
+    }
+    
+    .department-manager {
+        display: none;
+    }
+
+   .grid-header {
+        font-size: 8px;
+    }
+    
+    .grid-cell {
+        font-size: 8px;
+    }
+
+    .shift-slot {
+        font-size: 8px;
+    } 
+
+    .tilte_content{
+        display: none;
+    }
+
+    .userIf{
+        display: none;
+    }
+
+    .header h1 {
+        margin-bottom: 50px;
     }
 }
