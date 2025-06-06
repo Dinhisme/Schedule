@@ -2089,18 +2089,18 @@
           "notes": ""
         },
         {
-          "staff": "LĐ 5 02131231231",
-          "notes": "",
           "department": "Trực Lãnh Đạo",
-          "day": 0,
-          "shift": "Hàng 1"
-        },
-        {
-          "department": "Trực Lãnh Đạo",
-          "day": "1",
+          "day": "0",
           "shift": "Hàng 1",
           "staff": "LĐ 1",
           "notes": ""
+        },
+        {
+          "staff": "LĐ 5 02131231231",
+          "notes": "",
+          "department": "Trực Lãnh Đạo",
+          "day": "1",
+          "shift": "Hàng 1"
         },
         {
           "department": "Trực Lãnh Đạo",

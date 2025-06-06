@@ -7,6 +7,7 @@
     <title>Quản Lý Lịch Trực</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="img/logoKHTHIT.ico">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 </head>
 
 <body>
@@ -131,7 +132,7 @@
                 case 'TT Khoa Ptgm Hsct-Cđ':
                     return ['Hàng 1'];
 
-                case 'Khoa Ptgm Hstc-Cđ KV Gây mê':
+                case 'Khoa Ptgm-Hstc-Cđ KV Gây mê':
                     return ['Hàng 1', 'Hàng 2'];
 
                 case 'Khoa Ptgm-Hstc-Cđ KV ICU':
@@ -252,15 +253,24 @@
             activeWeek = week;
             document.getElementById('currentWeekBtn').classList.toggle('active', week === 'current');
             document.getElementById('nextWeekBtn').classList.toggle('active', week === 'next');
-            document.getElementById('currentWeekSchedule').style.display = 'block';
-            document.getElementById('nextWeekSchedule').style.display = 'none';
 
-            // Cập nhật dropdown và tải dữ liệu tương ứng
             const selector = document.getElementById('weekSelector');
             let weekKey = week === 'current' ? getCurrentWeekKey() : getNextWeekKey();
             selector.value = weekKey;
             loadAllSchedules(weekKey);
-            updateWeekTitleByKey(weekKey);
+
+            // Cập nhật đúng tiêu đề cho từng tuần
+            if (week === 'current') {
+                document.getElementById('currentWeekSchedule').style.display = 'block';
+                document.getElementById('nextWeekSchedule').style.display = 'none';
+                generateGrid('currentGrid');
+                updateWeekTitleByKey(weekKey, 'currentWeekTitle');
+            } else {
+                document.getElementById('currentWeekSchedule').style.display = 'none';
+                document.getElementById('nextWeekSchedule').style.display = 'block';
+                generateGrid('nextGrid');
+                updateWeekTitleByKey(weekKey, 'nextWeekTitle');
+            }
         }
 
         // function updateWeekTitles() {
@@ -411,44 +421,214 @@
             dragSource = null;
         }
 
-        function exportSchedule() {
+        async function exportSchedule() {
             const week = activeWeek === 'current' ? 'Hiện Tại' : 'Tiếp Theo';
             const scheduleData = activeWeek === 'current' ? currentWeekSchedule : nextWeekSchedule;
 
-            let exportText = `LỊCH TRỰC TUẦN ${week.toUpperCase()}\n`;
-            exportText += '='.repeat(50) + '\n\n';
+            // Lấy tiêu đề đang hiển thị
+            const titleId = activeWeek === 'current' ? 'currentWeekTitle' : 'nextWeekTitle';
+            let fileTitle = document.getElementById(titleId).textContent || 'Lịch trực';
 
-            departments.forEach((dept) => {
-                exportText += `${dept.toUpperCase()}\n`;
-                exportText += '-'.repeat(30) + '\n';
+            // Tìm 2 ngày trong tiêu đề
+            const match = fileTitle.match(/(\d{2})\/(\d{2})\/(\d{4})\s*-\s*(\d{2})\/(\d{2})\/(\d{4})/);
+            if (match) {
+                // Đổi định dạng dd/mm/yyyy thành dd.mm.yyyy
+                const from = `${match[1]}.${match[2]}.${match[3]}`;
+                const to = `${match[4]}.${match[5]}.${match[6]}`;
+                fileTitle = `Lịch trực từ ngày ${from} đến ngày ${to}`;
+            } else {
+                // fallback nếu không match
+                fileTitle = fileTitle.replace(/[\/\\:*?"<>|]/g, '').replace(/\s+/g, '-');
+            }
 
-                for (let day = 0; day < 7; day++) {
-                    const dayNames = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ Nhật'];
-                    exportText += `${dayNames[day]}:\n`;
+            const dataToSend = {
+                data: scheduleData,
+                week: week,
+                shifts: {
+                    'Trực Lãnh Đạo': 
+                        ['Hàng 1'],
 
-                    getShiftsForDept(dept).forEach(shift => {
-                        const key = `${dept}_${day}_${shift}`;
-                        const data = scheduleData[key];
-                        if (data) {
-                            exportText += `  ${shift}: ${data.staff}`;
-                            if (data.notes) exportText += ` (${data.notes})`;
-                            exportText += '\n';
-                        } else {
-                            exportText += `  ${shift}: Chưa xếp\n`;
-                        }
-                    });
-                    exportText += '\n';
+                    'Thường trú': 
+                        ['Hàng 1'],
+
+                    'Trưởng tua': 
+                        ['Hàng 1'],
+
+                    'Bs Khoa CC':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'],
+
+                    'Khoa Cấp Cứu':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10', 'Hàng 11', 'Hàng 12'],
+
+                    'Khoa CC Nhi-Sơ sinh':
+                        ['Hàng 1', 'Hàng 2'],
+
+                    'Bs Khoa Sanh':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'],
+
+                    'Khoa Sanh':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10', 'Hàng 11', 'Hàng 12'],
+
+                    'Bs Khoa SB':
+                        ['Hàng 1'],
+
+                    'Khoa SB':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6'],
+
+                    'Bs Khoa Phụ':
+                        ['Hàng 1'],
+
+                    'Khoa Phụ':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'],
+
+                    'Bs Khoa HP':
+                        ['Hàng 1'],
+
+                    'Khoa HP':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'],
+
+                    'Bs Khoa HS':
+                        ['Hàng 1'],
+
+                    'Khoa HS':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5'],
+
+                    'Bs Khoa ĐTTYC':
+                        ['Hàng 1'],
+
+                    'Khoa ĐTTYC':
+                        ['Hàng 1'],
+
+                    'Khu A':
+                        ['Hàng 1'],
+
+                    'Khu B':
+                        ['Hàng 1'],
+
+                    'Khu C':
+                        ['Hàng 1'],
+
+                    'TT Khoa Ptgm Hsct-Cđ':
+                        ['Hàng 1'],
+
+                    'Khoa Ptgm-Hstc-Cđ KV Gây mê':
+                        ['Hàng 1', 'Hàng 2'],
+
+                    'Khoa Ptgm-Hstc-Cđ KV ICU':
+                        ['Hàng 1'],
+
+                    'Khoa Pigm-Hstc-Cđ Bs Khẩm Tiền Mê':
+                        ['Hàng 1'],
+
+                    'ĐD Trực Ptgm Hstc-Cđ Ngày':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8'],
+
+                    'ĐD trưc ICU Ngày':
+                        ['Hàng 1'],
+
+                    'ĐD Trực Ptgm Hstc-Cđ Đêm':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8'],
+
+                    'ĐD trực ICU Đêm':
+                        ['Hàng 1'],
+
+                    'TT Khoa Nhi-Ss':
+                        ['Hàng 1'],
+
+                    'Khoa Nhi-Sơ Sinh':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', ' Hàng 9', 'Hàng 10'],
+
+                    'Khoa Ksnk Thường Trú':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3'],
+
+                    'Xét Nghiệm':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'],
+
+                    'Siêu Âm':
+                        ['Hàng 1', 'Hàng 2', 'Hàng 3'],
+
+                    'TT Sâ Tim':
+                        ['Hàng 1'],
+
+                    'X Quang':
+                        ['Hàng 1'],
+
+                    'TT X Quang':
+                        ['Hàng 1'],
+
+                    'Kế Toán':
+                        ['Hàng 1'],
+
+                    'Khoa Dược':
+                        ['Hàng 1'],
+
+                    'Thường Trú Bảo Trì':
+                        ['Hàng 1'],
+
+                    'Phcqt':
+                        ['Hàng 1'],
+
+                    'Tài Xế':
+                        ['Hàng 1'],
+
+                    'Tin Học':
+                        ['Hàng 1'],
+
+                    'Khoa Nhi SS TK':
+                        ['Hàng 1'],
+
+                    'Khoa Ptgm-Hstc-Cd (KV hồi súc sau mỗ) TK':
+                        ['Hàng 1'],
+
+                    'ĐD Trực Ptgm Hstc-Cd Ngày TK':
+                        ['Hàng 1'],
+
+                    'ĐD Trực Ptgm Hstc-Cd Đêm TK':
+                        ['Hàng 1'],
+
+                    'Khoa Phụ TK':
+                        ['Hàng 1'],
+
+                    'Khoa Sanh TK':
+                        ['Hàng 1'],
+
+                    'Khoa SB TK':
+                        ['Hàng 1'],
+
+                    'Khoa CС TK':
+                        ['Hàng 1'],
+
+                    'Khoa Sanh 13h-17h':
+                        ['Hàng 1'],
+
+                    'Khoa CC 13h-17h':
+                        ['Hàng 1'],
+
+                    'Khoa Ptgm-Hstc-Cđ':
+                        ['Hàng 1'],
+
+                    'Khoa Sanh TC':
+                        ['Hàng 1']
                 }
-                exportText += '\n';
+            };
+
+            const res = await fetch('/api/exportexcel', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ scheduleData: dataToSend, week })
             });
 
-            const blob = new Blob([exportText], { type: 'text/plain;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `lich-truc-tuan-${week.toLowerCase()}.txt`;
-            a.click();
-            URL.revokeObjectURL(url);
+            if (res.ok) {
+                const blob = await res.blob();
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${fileTitle}.xlsx`;
+                a.click();
+                URL.revokeObjectURL(url);
+            } else {
+                alert('Xuất file thất bại!');
+            }
         }
 
         // Tải lịch trực tổng hợp từ tất cả tài khoản
@@ -473,9 +653,14 @@
                 }
             });
 
-            // Hiển thị lên lưới
-            currentWeekSchedule = scheduleData;
-            generateGrid('currentGrid');
+            // Cập nhật cả hai biến theo tuần đang chọn
+            if (activeWeek === 'current') {
+                currentWeekSchedule = scheduleData;
+                generateGrid('currentGrid');
+            } else {
+                nextWeekSchedule = scheduleData;
+                generateGrid('nextGrid');
+            }
         }
 
         async function saveScheduleToServer() {
@@ -577,15 +762,28 @@
         }
 
         document.getElementById('weekSelector').addEventListener('change', function () {
-            loadAllSchedules(this.value);
-            updateWeekTitleByKey(this.value);
+            // Xác định tuần vừa chọn là tuần hiện tại hay tuần tiếp theo
+            const currentKey = getCurrentWeekKey();
+            const nextKey = getNextWeekKey();
+            if (this.value === currentKey) {
+                showWeek('current');
+            } else if (this.value === nextKey) {
+                showWeek('next');
+            } else {
+                // Nếu là tuần khác, vẫn hiển thị ở currentWeekSchedule
+                activeWeek = 'current';
+                currentWeekSchedule = {};
+                loadAllSchedules(this.value);
+                updateWeekTitleByKey(this.value);
+                document.getElementById('currentWeekSchedule').style.display = 'block';
+                document.getElementById('nextWeekSchedule').style.display = 'none';
+                generateGrid('currentGrid');
+            }
         });
 
-        function updateWeekTitleByKey(weekKey) {
-            // weekKey dạng "2025-22"
+        function updateWeekTitleByKey(weekKey, elementId = 'currentWeekTitle') {
             const [year, week] = weekKey.split('-').map(Number);
 
-            // Lấy ngày thứ 2 đầu tuần theo ISO
             function getMondayOfISOWeek(week, year) {
                 const simple = new Date(year, 0, 1 + (week - 1) * 7);
                 const dow = simple.getDay();
@@ -605,7 +803,7 @@
                 return date.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
             }
 
-            document.getElementById('currentWeekTitle').textContent =
+            document.getElementById(elementId).textContent =
                 `Lịch trực ${formatDate(monday)} - ${formatDate(sunday)}`;
         }
     </script>

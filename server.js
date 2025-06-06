@@ -1,6 +1,13 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import stripe from 'stripe';
+import ExcelJS from 'exceljs';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
@@ -26,9 +33,6 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on http://localhost:${PORT}`);
     console.log('LAN access: http://172.16.0.99:' + PORT);
 });
-
-import fs from 'fs';
-import path from 'path';
 
 const DATA_FILE = path.join(process.cwd(), '/public/data/data.json');
 
@@ -133,3 +137,63 @@ function getISOWeekNumber(date) {
     }
     return 1 + Math.ceil((firstThursday - tmp) / 604800000);
 }
+
+// API xuất lịch trực ra file Excel
+app.post('/api/exportexcel', async (req, res) => {
+    try {
+        const { scheduleData, week } = req.body;
+
+        // Đảm bảo scheduleData.data là mảng
+        let dataArray = scheduleData.data;
+        if (!Array.isArray(dataArray)) {
+            // Nếu là object, chuyển sang mảng
+            dataArray = Object.values(scheduleData.data);
+        }
+
+        const templatePath = path.join(__dirname, 'public', 'export', 'test.xlsx');
+        const exportPath = path.join(__dirname, 'public', 'export', `lich-truc-tuan-${week}.xlsx`);
+
+        const workbook = new ExcelJS.Workbook();
+        await workbook.xlsx.readFile(templatePath);
+        const ws = workbook.worksheets[0];
+
+        const exportDepts = [
+            { name: 'Trực Lãnh Đạo', shifts: ['Hàng 1'], startRow: 9 },
+            { name: 'Thường trú', shifts: ['Hàng 1'], startRow: 11 },
+            { name: 'Trưởng tua', shifts: ['Hàng 1'], startRow: 12 },
+            { name: 'Bs Khoa CC', shifts: ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4'], startRow: 13 },
+            { name: 'Khoa Cấp Cứu', shifts: ['Hàng 1', 'Hàng 2', 'Hàng 3', 'Hàng 4', 'Hàng 5', 'Hàng 6', 'Hàng 7', 'Hàng 8', 'Hàng 9', 'Hàng 10', 'Hàng 11', 'Hàng 12'], startRow: 16 },
+            // Thêm các khoa khác...
+        ];
+        const colIndexes = [2, 3, 4, 5, 6, 7, 8]; // B=2, C=3,... H=8
+
+        exportDepts.forEach(deptObj => {
+            deptObj.shifts.forEach((shift, shiftIdx) => {
+                const row = deptObj.startRow + shiftIdx;
+                for (let day = 0; day < 7; day++) {
+                    // Tìm object phù hợp trong mảng
+                    const found = dataArray.find(
+                        item => item.department === deptObj.name &&
+                                (item.day == day || item.day === String(day)) &&
+                                item.shift === shift
+                    );
+                    const value = found && found.staff ? found.staff : '';
+                    ws.getRow(row).getCell(colIndexes[day]).value = value;
+                }
+            });
+        });
+
+        await workbook.xlsx.writeFile(exportPath);
+
+        res.download(exportPath, err => {
+            if (err) {
+                res.status(500).json({ error: 'Không thể gửi file!' });
+            } else {
+                setTimeout(() => fs.unlinkSync(exportPath), 10000);
+            }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Lỗi xuất file Excel!' });
+    }
+});

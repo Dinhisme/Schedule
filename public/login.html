@@ -393,7 +393,7 @@
                 const data = await res.json();
                 currentUser = { username, departments: data.departments };
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                alert('Đăng nhập thành công!');
+                //alert('Đăng nhập thành công!');
                 window.location.href = '/';
             } else {
                 document.getElementById('loginError').textContent = 'Sai tên đăng nhập hoặc mật khẩu!';
